@@ -1,0 +1,40 @@
+.home-columns > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-columns img {
+  width: 100%;
+}
+
+.home-columns > div > div {
+  order: 1;
+}
+
+.home-columns > div > .columns-img-col {
+  order: 0;
+}
+
+.home-columns > div > .columns-img-col img {
+  display: block;
+}
+
+.home-columns div {
+  gap: 10px;
+}
+
+
+@media (width >= 900px) {
+  .home-columns > div {
+    align-items: flex-start;
+    flex-direction: unset;
+    gap: 10px;
+  }
+
+  .home-columns > div > div {
+    flex: 1;
+    order: unset;
+  }
+}
+
+

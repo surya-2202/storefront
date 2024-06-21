@@ -1,0 +1,39 @@
+.gifts > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.gifts img {
+  width: 100%;
+}
+
+.gifts > div > div {
+  order: 1;
+}
+
+.gifts > div > .columns-img-col {
+  order: 0;
+}
+
+.gifts > div > .columns-img-col img {
+  display: block;
+}
+
+.gift-inner-wrapper h4 {
+  margin: 0;
+}
+
+@media (width >= 900px) {
+  .gifts > div {
+    align-items: flex-start;
+    flex-direction: unset;
+    gap: 32px;
+  }
+
+  .gifts > div > div {
+    flex: 1;
+    order: unset;
+  }
+}
+
+
