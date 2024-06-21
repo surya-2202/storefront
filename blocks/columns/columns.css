@@ -19,6 +19,14 @@
   display: block;
 }
 
+.columns.columns-6-cols > div {
+  gap: 10px;
+}
+
+#shop-by-category {
+  margin: 0;
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: flex-start;

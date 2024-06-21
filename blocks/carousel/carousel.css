@@ -68,17 +68,19 @@
   }
   
   .carousel .carousel-slide-indicator button {
-    width: 1rem;
-    height: 1rem;
-    padding: 0;
-    border-radius: 1rem;
-    background-color: rgba(0 0 0 / 25%);
+    background: #fff;
+    border: 1px solid #000;
+    opacity: .5;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
   }
   
   .carousel .carousel-slide-indicator button:disabled,
   .carousel .carousel-slide-indicator button:hover,
   .carousel .carousel-slide-indicator button:focus-visible {
-    background-color: rgba(0 0 0 / 80%);
+    background-color: var(--color-neutral-50);
+    opacity: 1;
   }
   
   .carousel .carousel-slide-indicator span,
@@ -104,23 +106,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 2;
   }
   
   /* stylelint-disable-next-line no-descending-specificity */
   .carousel .carousel-navigation-buttons button {
-    border-radius: 8px;
+    border-radius: 100%;
     margin: 0;
     padding: 0;
-    width: 2rem;
-    height: 2rem;
+    width: 5rem;
+    height: 5rem;
     position: relative;
-    background-color: rgba(0 0 0 / 25%);
+    background-color: var(--color-custom-green-50);
+    border: 0;
+    cursor: pointer;
   }
   
   .carousel .carousel-navigation-buttons button:hover,
   .carousel .carousel-navigation-buttons button:focus-visible {
-    background-color: rgba(0 0 0 / 80%);
+    background-color: var(--color-custom-green-50);
   }
   
   .carousel .carousel-navigation-buttons button::after {
@@ -149,8 +153,8 @@
     }
   
     .carousel .carousel-navigation-buttons button {
-      width: 3rem;
-      height: 3rem;
+      width: 5rem;
+      height: 5rem;
     }
   
     .carousel .carousel-navigation-buttons button::after {
@@ -168,3 +172,19 @@
       --slide-content-width: auto;
     }
   }
+
+@media (width >= 900px) {
+  main .section > .carousel-wrapper {
+    width: 100%;
+    max-width: inherit;
+    position: relative;
+  }
+
+  main .section > .carousel-wrapper nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 2;
+  }
+ }
