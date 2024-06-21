@@ -371,6 +371,11 @@ main img {
   width: 100%;
 }
 
+main .section > div  {
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
 /* sections */
 main .section {
   padding: var(--spacing-large) var(--spacing-small);
@@ -387,6 +392,7 @@ main .section {
   main .section > div {
     max-width: 1600px;
     margin: auto;
+   
   }
 
   main .section > .columns-wrapper {

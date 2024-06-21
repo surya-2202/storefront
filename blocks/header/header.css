@@ -11,27 +11,30 @@ header .nav-wrapper {
 
 header nav {
   box-sizing: border-box;
-  display: grid;
+  /* display: grid;
   grid-template:
     'hamburger brand tools' var(--nav-height)
     'sections sections sections' 1fr / auto 1fr auto;
+  align-items: center; 
+  gap: 0 32px;*/
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 0 32px;
   margin: auto;
   max-width: 1600px;
   height: var(--nav-height);
-  padding: 0 16px;
+  padding: 0 20px;
   font-family: var(--type-base-font-family);
 }
 
-header nav[aria-expanded='true'] {
+/* header nav[aria-expanded='true'] {
   grid-template:
     'hamburger brand' var(--nav-height)
     'sections sections' 1fr
     'tools tools' var(--nav-height) / auto 1fr;
   overflow-y: auto;
   min-height: 100vh;
-}
+} */
 
 @media (width >= 900px) {
   header nav {
@@ -43,6 +46,10 @@ header nav[aria-expanded='true'] {
     min-height: 150px;
     overflow: visible;
   }
+
+  .header-wrapper {
+    min-height:151px !important;
+  }
 }
 
 header nav p {
@@ -52,7 +59,6 @@ header nav p {
 
 /* hamburger */
 header nav .nav-hamburger {
-  grid-area: hamburger;
   height: 22px;
   display: flex;
   align-items: center;
@@ -129,7 +135,11 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
     display: none;
     visibility: hidden;
   }
+  header nav .nav-brand img {
+    width: 128px;
+  }
 }
+
 
 /* brand */
 header nav .nav-brand a {
@@ -140,7 +150,6 @@ header nav .nav-brand a {
 }
 
 header nav .nav-brand img {
-  width: 128px;
   height: auto;
 }
 
@@ -420,8 +429,32 @@ header {
   #popup-menu {
     right: -200px;
   }
+
+  .header-wrapper {
+    min-height: 90px !important; 
+  }
+
+  header nav .nav-brand img {
+    width: 90px;
+  }
+
+  header nav .nav-brand  {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0 auto 0 20px;
+  }
+  header nav {
+    height: auto;
+  }
 }
 
+
+@media screen and (width <= 600px) {
+  main .section {
+    padding: 0;
+  }
+}
 #popup-menu.showPopUp {
   display: block;
 }
@@ -452,6 +485,7 @@ header {
 
 #wrapper-pop-up-button #header-login-button.backgroundColor {
   background-color: #f5f5f5;
+  color: var(--color-neutral-900);
 }
 
 #wrapper-pop-up-button #header-login-button:hover {
@@ -554,7 +588,6 @@ header {
 }
 
 .header-wrapper {
-  min-height: 151px !important; 
   box-sizing: border-box !important;
 }
 

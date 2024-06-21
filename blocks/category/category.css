@@ -1,0 +1,43 @@
+.category > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.category img {
+  width: 100%;
+}
+
+.category > div > div {
+  order: 1;
+}
+
+.category > div > .columns-img-col {
+  order: 0;
+}
+
+.category > div > .columns-img-col img {
+  display: block;
+}
+
+.category div {
+  gap: 10px;
+}
+
+#shop-by-category {
+  margin: 0;
+}
+
+@media (width >= 900px) {
+  .category > div {
+    align-items: flex-start;
+    flex-direction: unset;
+    gap: 10px;
+  }
+
+  .category > div > div {
+    flex: 1;
+    order: unset;
+  }
+}
+
+
