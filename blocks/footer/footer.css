@@ -6,12 +6,47 @@ footer {
 }
 
 footer .footer {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: auto;
 }
 
 footer .footer p {
   margin: 0;
+}
+
+
+.footer .columns-3-cols {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer .columns-3-cols > div > div[data-align="center"] {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer .columns-3-cols > div > div[data-align="center"] .icon {
+    height: 70px;
+    width: 70px;
+    filter: invert(1);
+}
+
+.footer .columns-3-cols > div > div[data-align="center"] h4 {
+  margin: 10px 0;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+.footer .columns-3-cols > div > div[data-align="center"] p {
+    padding: 0 40px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.footer .columns-5-cols > div > .columns-img-col:first-child img {
+  width: auto;
 }
 
 .footer .columns-5-cols > div > .columns-img-col:last-child {
